@@ -12,3 +12,7 @@ def read_root():
 @app.get("/items/{item_id}")
 def read_item(item_id: int, query: Optional[str] = None):
     return {"item_id": item_id, "query": query}
+
+@app.get("/oauth/{data}")
+def oauth(data: str):
+    return {"data": data}
